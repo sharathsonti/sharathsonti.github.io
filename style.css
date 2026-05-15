@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #1a1a1a;
+  background: #fff;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+nav.site-nav {
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+nav.site-nav ul {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.1rem 1.5rem;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-size: 0.95rem;
+}
+
+nav.site-nav a {
+  color: #1a1a1a;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+nav.site-nav a:hover,
+nav.site-nav a.active {
+  border-bottom: 1px solid #1a1a1a;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 5rem;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.headshot {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 18%;
+  margin-bottom: 1.5rem;
+  filter: grayscale(15%);
+}
+
+h1 {
+  font-size: 1.85rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #555;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+p {
+  margin-bottom: 1.1rem;
+}
+
+a {
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-decoration-color: #aaa;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-color: #1a1a1a;
+}
+
+h2.section-heading {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 2.25rem;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.01em;
+}
+
+h2.section-heading:first-of-type {
+  margin-top: 0.5rem;
+}
+
+.paper {
+  margin-bottom: 1.75rem;
+}
+
+.paper-title {
+  font-weight: 600;
+  font-size: 1.02rem;
+  margin-bottom: 0.2rem;
+  display: block;
+}
+
+.paper-meta {
+  color: #555;
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-bottom: 0.4rem;
+}
+
+.paper-abstract {
+  font-size: 0.95rem;
+  color: #2a2a2a;
+  text-align: justify;
+}
+
+.teaching-entry {
+  margin-bottom: 1.5rem;
+}
+
+.teaching-course {
+  font-weight: 600;
+  font-size: 1.02rem;
+}
+
+.teaching-meta {
+  color: #555;
+  font-size: 0.95rem;
+  font-style: italic;
+  margin: 0.15rem 0 0.35rem;
+}
+
+.teaching-desc {
+  font-size: 0.95rem;
+  color: #2a2a2a;
+}
+
+@media (max-width: 600px) {
+  nav.site-nav ul {
+    padding: 0.9rem 1.25rem;
+    gap: 1.25rem;
+    font-size: 0.9rem;
+  }
+  main {
+    padding: 2.25rem 1.25rem 4rem;
+  }
+  .headshot {
+    width: 140px;
+    height: 140px;
+  }
+  h1 {
+    font-size: 1.55rem;
+  }
+  .page-title {
+    font-size: 1.45rem;
+  }
+}
