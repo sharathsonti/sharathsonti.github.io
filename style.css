@@ -134,6 +134,41 @@ h2.section-heading:first-of-type {
   text-align: justify;
 }
 
+.paper-links {
+  font-size: 0.85rem;
+  color: #555;
+  margin: -0.15rem 0 0.5rem;
+}
+
+.paper-body {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.paper-figure {
+  flex: 0 0 240px;
+  margin: 0;
+}
+
+.paper-figure a {
+  display: block;
+  text-decoration: none;
+}
+
+.paper-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.paper-figure figcaption {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 0.3rem;
+  line-height: 1.45;
+}
+
 .teaching-entry {
   margin-bottom: 1.5rem;
 }
@@ -173,5 +208,12 @@ h2.section-heading:first-of-type {
   }
   .page-title {
     font-size: 1.45rem;
+  }
+  .paper-body {
+    flex-direction: column;
+  }
+  .paper-figure {
+    flex-basis: auto;
+    max-width: 320px;
   }
 }
