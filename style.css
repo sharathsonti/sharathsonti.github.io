@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #1a1a1a;
   background: #fff;
   line-height: 1.65;
@@ -22,45 +22,35 @@ nav.site-nav {
 }
 
 nav.site-nav ul {
-  max-width: 760px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 1.1rem 1.5rem;
   list-style: none;
   display: flex;
-  gap: 2rem;
-  font-size: 0.95rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.25rem 1.25rem;
+  font-size: 17px;
 }
 
 nav.site-nav a {
-  color: #1a1a1a;
+  color: #444;
   text-decoration: none;
-  letter-spacing: 0.02em;
 }
 
-nav.site-nav a:hover,
+nav.site-nav a:hover {
+  color: #1f4e8c;
+}
+
 nav.site-nav a.active {
-  border-bottom: 1px solid #1a1a1a;
+  color: #1f4e8c;
+  font-weight: 500;
 }
 
 main {
   max-width: 760px;
   margin: 0 auto;
   padding: 3.5rem 1.5rem 5rem;
-}
-
-.home-header {
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
-
-.headshot {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center 18%;
-  margin-bottom: 1.5rem;
-  filter: grayscale(15%);
 }
 
 h1 {
@@ -70,9 +60,94 @@ h1 {
   margin-bottom: 0.4rem;
 }
 
-.subtitle {
-  font-size: 1rem;
+/* Homepage: name and subtitle on top, then photo + CV button beside the intro text */
+main.home {
+  max-width: 900px;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  color: #222;
+}
+
+.home__name {
+  font-size: 44px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin: 0 0 6px;
+}
+
+.home__title {
+  font-size: 18px;
   color: #555;
+  margin: 0 0 28px;
+}
+
+.home__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.home__aside {
+  flex: 0 1 272px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.home__photo {
+  display: block;
+  width: 100%;
+  height: auto; /* required: otherwise the img's height attribute overrides aspect-ratio */
+  aspect-ratio: 18 / 25;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.home__cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border: 1px solid #1f4e8c;
+  border-radius: 2px;
+  color: #1f4e8c;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.home__cv:hover {
+  background: #1f4e8c;
+  color: #fff;
+}
+
+.home__bio {
+  flex: 999 1 360px;
+  min-width: 0;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.home__bio p {
+  margin: 0 0 16px;
+}
+
+.home__bio p:last-child {
+  margin-bottom: 0;
+}
+
+.home__bio a {
+  color: #1f4e8c;
+  text-decoration-color: currentcolor;
+}
+
+.home__bio a:hover {
+  color: #163a69;
+  text-decoration-color: currentcolor;
 }
 
 .page-title {
@@ -246,15 +321,9 @@ h2.section-heading:first-of-type {
 @media (max-width: 600px) {
   nav.site-nav ul {
     padding: 0.9rem 1.25rem;
-    gap: 1.25rem;
-    font-size: 0.9rem;
   }
   main {
     padding: 2.25rem 1.25rem 4rem;
-  }
-  .headshot {
-    width: 140px;
-    height: 140px;
   }
   h1 {
     font-size: 1.55rem;
@@ -268,5 +337,19 @@ h2.section-heading:first-of-type {
   .paper-figure {
     flex-basis: auto;
     max-width: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  main.home {
+    padding-top: 2rem;
+  }
+  .home__name {
+    font-size: 34px;
+  }
+  .home__aside {
+    flex-basis: 100%;
+    max-width: 272px;
+    margin: 0 auto;
   }
 }
