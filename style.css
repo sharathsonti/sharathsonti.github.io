@@ -318,6 +318,30 @@ h2.section-heading:first-of-type {
   color: #2a2a2a;
 }
 
+.eval-note {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.eval {
+  margin: 0 0 1.25rem;
+  padding-left: 1rem;
+  border-left: 2px solid #e5e5e5;
+}
+
+.eval blockquote {
+  font-size: 0.98rem;
+  color: #2a2a2a;
+}
+
+.eval figcaption {
+  color: #555;
+  font-size: 0.85rem;
+  font-style: italic;
+  margin-top: 0.2rem;
+}
+
 @media (max-width: 600px) {
   nav.site-nav ul {
     padding: 0.9rem 1.25rem;
